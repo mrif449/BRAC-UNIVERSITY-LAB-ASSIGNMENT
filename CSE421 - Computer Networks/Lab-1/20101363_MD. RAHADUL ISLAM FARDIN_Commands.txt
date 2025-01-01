@@ -1,0 +1,70 @@
+*** For Router 1: ***
+Router>
+	enable
+
+Router#
+	configure terminal
+
+Router (config)#
+	hostname R1
+
+R1 (config)#
+	enable secret class
+	banner motd & Authorized Access Only &
+	line console 0
+
+R1 (config-line)#
+	password cisco
+	login
+	exit
+
+R1 (config)#
+	interface fastethernet 0/0
+
+R1(config-if)#
+	ip address 192.168.1.1 255.255.255.0
+	no shutdown
+	interface serial 0/0/0
+	ip address 192.168.2.1 255.255.255.0
+	clock rate 64000
+	no shutdown
+	end
+R1#
+	copy running-config startup-config
+
+
+
+*** For Router 2: ***
+Router>
+	enable
+
+Router#
+	configure terminal
+
+Router (config)#
+	hostname R2
+
+R2 (config)#
+	enable secret class
+	banner motd & Authorized Access Only &
+	line console 0
+
+R2 (config-line)#
+	password cisco
+	login
+	exit
+
+R2 (config)#
+	interface serial 0/0/0
+
+R2(config-if)#
+	ip address 192.168.2.2 255.255.255.0
+	no shutdown
+	interface fastethernet 0/0
+	ip address 192.168.3.1 255.255.255.0
+	no shutdown
+	end
+
+R2#
+	copy running-config startup-config
+

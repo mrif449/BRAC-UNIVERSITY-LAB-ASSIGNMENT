@@ -1,0 +1,32 @@
+C:\>ipconfig /all
+C:\>ping 172.16.1.1
+C:\>ping 209.165.201.2
+C:\>ping 172.16.1.4
+C:\>ping 172.16.2.3
+C:\>ping 172.16.2.4
+C:\>ipconfig /all
+C:\>ping 172.16.1.1
+C:\>ping 209.165.201.2
+C:\>ping 172.16.1.3
+C:\>ping 172.16.2.3
+C:\>ping 172.16.2.4
+C:\>ipconfig /all
+C:\>ping 209.165.201.2
+C:\>ping 172.16.2.1
+C:\>ping 172.16.2.4
+C:\>ping 172.16.1.3
+C:\>ping 172.16.1.4
+C:\>SSH -l Admin01 172.16.1.1
+Password: 
+R1#sh ip int brief
+R1#conf t
+R1 (config)#int g0/1
+R1 (config-if)#ip add 172.16.2.1 255.255.255.0
+R1 (config-if)#no shut
+
+C:\>ipconfig /all
+C:\>ping 209.165.201.2
+C:\>ping 172.16.2.1
+C:\>ping 172.16.2.3
+C:\>ping  172.16.1.3
+C:\>ping 172.16.1.4

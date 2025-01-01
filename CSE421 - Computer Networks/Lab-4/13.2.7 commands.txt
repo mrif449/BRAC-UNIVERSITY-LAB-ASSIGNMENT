@@ -1,0 +1,48 @@
+C:\>ipconfig /all
+C:\>  tracert 10.10.1.18
+C:\>ipconfig /all
+C:\>ping 10.10.1.98
+C:\>tracert 10.10.1.98
+
+User Access Verification
+
+Password: 
+
+R1>show ip interface brief
+R1>show ip route
+
+User Access Verification
+
+Password: 
+
+R3>en
+Password: 
+R3#show ip interface brief
+R3#show ip route
+
+User Access Verification
+
+Password: 
+
+R2>show ip interface brief
+R2>en
+Password: 
+R2#show ip interface brief
+R2#
+R2#show ip interface brief
+R2#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#int s0/0/0
+R2(config-if)#ip address 10.10.1.5 255.255.255.252
+R2(config-if)#no shut down
+R2(config-if)#exit
+
+C:\>ping 10.10.1.18
+C:\>ping 10.10.1.98
+C:\>ipv6config /all
+
+C:\>ipv6config /all
+C:\>tracert 2001:DB8:1:1::2
+C:\>ping 2001:DB8:1:4::2
+C:\>ping 2001:DB8:1:1::2
+

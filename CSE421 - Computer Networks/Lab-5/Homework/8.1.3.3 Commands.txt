@@ -1,0 +1,4 @@
+R1>en
+R1#conf t
+R1(config)#int g0/0
+R1(config-if)#ip helper-address 192.168.60.253

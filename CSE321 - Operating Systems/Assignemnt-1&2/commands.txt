@@ -1,0 +1,63 @@
+# Answer to the Question Number: 1
+(a)
+mrif449@supernova:~/Desktop$ touch 20101363_1.txt 20101363_2.txt 20101363_3.txt 20101363_4.txt
+mrif449@supernova:~/Desktop$ mkdir Rahadul1 Rahadul2
+mrif449@supernova:~/Desktop$ mv 20101363_1.txt Rahadul1
+mrif449@supernova:~/Desktop$ mv 20101363_2.txt Rahadul1
+mrif449@supernova:~/Desktop$ mv 20101363_3.txt Rahadul1
+mrif449@supernova:~/Desktop$ touch 20101363_1.txt 20101363_2.txt
+mrif449@supernova:~/Desktop$ cp 20101363_1.txt Rahadul2
+mrif449@supernova:~/Desktop$ cp 20101363_2.txt Rahadul2
+mrif449@supernova:~/Desktop$ mkdir Rahadul3
+mrif449@supernova:~/Desktop$ cp -r Rahadul1 Rahadul3
+mrif449@supernova:~/Desktop$ cd Rahadul3
+mrif449@supernova:~/Desktop$ ls -l
+total 4
+drwxr-xr-x 2 mrif449 mrif449 4096 Oct 24 14:58 Rahadul1
+mrif449@supernova:~/Desktop$ chmod 755 Rahadul1
+mrif449@supernova:~/Desktop$ cd ..
+mrif449@supernova:~/Desktop$ ls
+20101363_1.txt  Rahadul1
+20101363_2.txt  Rahadul2
+20101363_4.txt  Rahadul3
+mrif449@supernova:~/Desktop$ mv /home/mrif449/Desktop/Rahadul3 /home/mrif449/
+
+
+(b)
+mrif449@supernova:~$ cat > course.txt
+CSE321 Operating System 06
+CSE340 Computer Architecture 01          
+MAT215 Mathematics III Complex Variables & Laplace Transformations 06
+ENV103 Environmental Science 01
+mrif449@supernova:~$ grep -o 'CSE' course.txt | wc -l
+2
+
+
+(c)
+mrif449@supernova:~/Desktop$ ls -a
+.               .config    .local            Rahadul2
+..              Desktop    Music             Rahadul3
+20101363_1.txt  Documents  .pam_environment  snap
+20101363_2.txt  Downloads  Pictures          .ssh
+20101363_4.txt  .gnome     .pki              .sudo_as_admin_successful
+.bash_history   .gnupg     .profile          Templates
+.bash_logout    .icons     Public            Videos
+.bashrc         .java      PycharmProjects   .vscode
+.cache          .lesshst   Rahadul1          .vscode-insiders
+
+
+(d)
+mrif449@supernova:~/Desktop$ sed -n '5,17p' abc.txt
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
